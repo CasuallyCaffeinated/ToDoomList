@@ -1,10 +1,7 @@
 import newScheme from "./schemes.js";
 
 (async () => {
-    let demoBtn = document.querySelector('.demo-btn')
-    console.log('Hey!?!?!?!?!')
-    // demoBtn.addEventListener('click', async () => {
-        console.log('HERE')
+    if (!document.querySelector('.schemes-list').length) {
         let arrOfData = []
         let res = null;
         let resObj = null;
@@ -57,7 +54,7 @@ import newScheme from "./schemes.js";
             }
 
         }
-        if (!document.querySelector('.schemes-list').length) {
+
             await newScheme.displaySchemes();
         }
 })()
